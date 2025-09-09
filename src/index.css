@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+body,
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.left-nav {
+  padding: 0.5rem;
+  flex: 0 0 20%;
+  background-color: #000;
+  height: 100%;
+  color: #fff;
+  font-size: 1rem;
+  overflow: hidden;
+}
+.left-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 2rem;
+}
+
+.left-nav ul li {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 0.4rem;
+}
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: row;
+  overflow: hidden;
+}
+.logo {
+  display: block;
+  font-size: 2rem;
+}
+.right-section ul {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+.content {
+  padding-top: 3rem;
+}
+.right-section ul li {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+}
+.right-section {
+  flex: 1;
+  padding: 0 1rem;
+  overflow-y: auto;
+  flex-direction: column;
+}
+.right-section nav {
+  padding: 0.5rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100%-20%);
+  z-index: 100;
+  background-color: white;
+}
+.upload-container {
+  padding: clamp(1rem, 5vw, 4rem) clamp(1rem, 8vw, 8rem);
+  margin: 2rem auto;
+}
+.form-elements {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+input {
+  border: 1px solid #a9a9a9;
+  padding: 0.4rem;
+}
+input[type="file"]::file-selector-button {
+  padding: 0.5rem;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  border: 1px solid #000;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .left-nav {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .form-elements {
+    grid-template-columns: 1fr;
+  }
+  .upload-container {
+    padding: 1rem;
+  }
+}
+.Summary-cards {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+.Summary-card {
+  border: 2px solid #d3d3d3;
+  padding: 0.5rem 1rem 2rem 0.5rem;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.Summary-card h3 {
+  font-weight: 800;
+}
+.Summary-card h4 {
+  font-weight: 600;
+}
+.section-2 {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem;
+  border: 1p solid #000;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+table th,
+table td {
+  border: 1px solid #d3d3d3;
+  text-aliggn: left;
+  word-wrap: break-word;
+  padding: 0.2rem;
+}
+.TableSection {
+  border: 2px solid #d3d3d3;
+}
+.Profile {
+  display: flex;
+  margin: 2rem;
+  gap: 2rem;
+  flex-grow: 0;
+}
+.Profile > div {
+  margin: 1rem;
+}
+.left {
+  width: 70%;
+  position: relative;
+}
+.right {
+  width: 30%;
+  border: 2px solid #d3d3d3;
+  border-radius: 1rem;
+}
+.left div > div {
+  display: flex;
+  flex-direction: column;
+}
